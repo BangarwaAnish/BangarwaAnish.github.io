@@ -1,3 +1,5 @@
+console.log("%c👋 Hi there! Need a DevOps expert? Let's chat!", "color: #06b6d4; font-size: 16px;");
+
 // Mobile menu toggle
 const mobileMenu = document.querySelector('.mobile-menu');
 const navLinks = document.querySelector('.nav-links');
@@ -145,5 +147,38 @@ document.addEventListener('DOMContentLoaded', () => {
     section.style.transform = 'translateY(30px)';
     section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(section);
+  });
+});
+
+//client-side validation
+contactForm.addEventListener('submit', (e) => {
+  const email = document.getElementById('email').value;
+  if (!email.includes('@')) {
+    e.preventDefault();
+    alert('Please enter a valid email address.');
+  }
+});
+
+// Dark Mode Toggle
+document.addEventListener('DOMContentLoaded', function() {
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  const icon = darkModeToggle.querySelector('i');
+  
+  // Check for saved preference or use system preference
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const currentTheme = localStorage.getItem('theme') || (prefersDark ? 'dark' : 'light');
+  
+  // Set initial theme
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  icon.className = currentTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+  
+  // Toggle function
+  darkModeToggle.addEventListener('click', function() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
   });
 });
