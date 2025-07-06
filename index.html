@@ -2,8 +2,9 @@
 <html lang="en">
 
 <head>
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Anish Choudhary - Senior DevOps Engineer specializing in CI/CD, Cloud Infrastructure, DevSecOps, and Embedded Systems." />
   <meta property="og:title" content="Anish Choudhary - Senior DevOps Engineer" />
   <meta property="og:description" content="Portfolio website showcasing Anish Choudhary's DevOps expertise." />
@@ -78,7 +79,12 @@
             -->
           </div>
           <div class="hero-img">
-            <img src="assets/Anish_Choudhary_Pic.jpg" alt="Anish Choudhary" class="avatar" loading="lazy" />
+            <img src="assets/Anish_Choudhary_Pic.jpg" 
+                 alt="Anish Choudhary - Senior DevOps Engineer" 
+                 class="avatar" 
+                 loading="lazy"
+                 width="280"
+                 height="280">
           </div>
         </div>
       </div>
@@ -303,7 +309,7 @@
 
   <div class="coffee">
     <a href="https://www.buymeacoffee.com/rj_anish_choudhary" target="_blank" aria-label="Buy me a coffee">
-      <img src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-1.svg" alt="Buy Me a Coffee">
+      <img src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-1.svg" alt="Buy Me a Coffee" loading="lazy">
     </a>
   </div>
 
@@ -311,7 +317,7 @@
     <div class="container">
       <div class="social-icons">
         <a href="mailto:brm.anish.choudhary@gmail.com"><i class="fas fa-envelope"></i></a>
-        <a href="tel:+918078674497"><i class="fas fa-phone"></i></a>
+        <a href="tel:+918078674497" aria-label="Phone"><i class="fas fa-phone"></i></a>
         <a href="https://linkedin.com/in/anish-choudhary-39471813b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
         <a href="https://instagram.com/rj_anish_choudhary" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
         <!-- <a href="https://youtube.com/comingsoon" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a> -->
@@ -319,12 +325,11 @@
       <div class="footer-location">
         <i class="fas fa-map-marker-alt"></i> Jaipur, Rajasthan, India
       </div>
-      <p>&copy; 2025 Anish Choudhary. All rights reserved. | Senior DevOps Engineer</p>
+      <p>&copy; <span id="current-year">2025</span> Anish Choudhary. All rights reserved.</p>
     </div>
   </footer>
 
-
   <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
 </body>
-
 </html>
